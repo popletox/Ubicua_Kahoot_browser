@@ -1,0 +1,31 @@
+#page_login{
+	display:block;
+
+}
+
+#page_main, #page_add_task, #page_modif_task{
+	display: none;
+}
+
+#text_error_add, #text_error_modif, #text_error_add_duplicate{
+	color: red;
+	display: none;
+}
+
+.fab {
+	position: absolute;
+	z-index: 9999;
+	font-size: 32px;
+	color: white;
+	background-color: #4caf50;
+	border-radius: 32px;
+	width: 64px;
+	height: 64px;
+	line-height: 64px;
+	text-align: center;
+}
+
+.bottom-right {
+	bottom: 15px;
+	right: 15px;
+}

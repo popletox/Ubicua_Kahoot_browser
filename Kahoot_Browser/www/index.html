@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Security-Policy" content="
+				default-src
+					'self'
+					data: gap: wss:
+					https://*.gstatic.com
+					https://*.googleapis.com
+					https://apis.google.com
+					https://kahootbrowser.firebaseapp.com
+					https://*.firebaseio.com
+					https://www.googletagmanager.com/gtag/js?l=dataLayer 
+					'unsafe-inline';
+				style-src
+					'self'
+					'unsafe-inline';
+				media-src
+					*;
+				img-src
+					'self'
+					data: content:;">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Kahoot</title>
+    </head>
+    <body>
+		<div id="page_login">
+			<button id="btn_google_login">Acceder con Google</button>
+		</div>
+		<div id="page_main">
+			<button id="btn_add_task" class="fab bottom-right"> + </button>
+		</div>
+		<div id="page_add_task">
+			<div>
+				<label for="task_name"> Nombre de la tarea </label>
+				<input type="text" id="task_name" name="task_name" />
+			</div>
+			<button id="btn_done_add">Añadir</button>
+			<button id="btn_cancel_add">Cancelar</button>
+			<p id="text_error_add"> Añade un nombre a la tarea </p>
+			<p id="text_error_add_duplicate"> Ya has creado una tarea con este nombre </p>
+		</div>
+		<div id="page_modif_task">
+			<label for="new_task_name"> Modifica el nombre de la tarea </label>
+			<input type="text" id="new_task_name" name="new_task_name" />
+			<button id="btn_done_modif">Modificar</button>
+			<button id="btn_cancel_modif">Cancelar</button>
+			<p id="text_error_modif"> Añade un nombre a la tarea </p>
+		</div>
+		
+		
+        <script type="text/javascript" src="cordova.js"></script>
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-database.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		https://firebase.google.com/docs/web/setup#available-libraries -->
+
+		<script>
+		  // Your web app's Firebase configuration
+		  var firebaseConfig = {
+			apiKey: "AIzaSyAj9jjNEXqrdQFEJyicdBWFq-NfizYLueI",
+			authDomain: "kahootbrowser.firebaseapp.com",
+			projectId: "kahootbrowser",
+			storageBucket: "kahootbrowser.appspot.com",
+			messagingSenderId: "631559264281",
+			appId: "1:631559264281:web:248f81a828887f7db6b288"
+		  };
+		  // Initialize Firebase
+		  firebase.initializeApp(firebaseConfig);
+		</script>
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>
